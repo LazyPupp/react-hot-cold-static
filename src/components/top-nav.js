@@ -7,12 +7,12 @@ export default function TopNav(props) {
         <nav>
             <ul className="clearfix">
                 <li>
-                    <a className="what" href="#">
+                    <a className="what" href="#" onClick={e => props.showInfo(true)}>
                         What?
                     </a>
                 </li>
                 <li>
-                    <a className="new" href="#">
+                    <a className="new" href="#" onClick={e => props.newGame()}>
                         + New Game
                     </a>
                 </li>
@@ -20,4 +20,3 @@ export default function TopNav(props) {
         </nav>
     );
 }
-
