@@ -22,7 +22,6 @@ export default class Game extends React.Component {
       this.setState({feedback: "Enter a valid number, please!"});
     }else if(this.state.guesses.indexOf(input) !== -1) {
       this.setState({feedback: "You already guessed that!"});
-      return;
     }else {
       this.setState({guesses: [...this.state.guesses, input], count: ++this.state.count, feedback: this.checkAnswer(input)});
     }
@@ -55,7 +54,7 @@ export default class Game extends React.Component {
   }
 
   render() {
-    console.log(this.state.answer);
+    // console.log(this.state.answer);
     return (
         <div>
             <Header newGame={()=> this.newGame()}/>
